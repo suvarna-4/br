@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="but">contact</button>
+    <button id="but">contact</button>
+    <button id="but">contact</button>
+    <button id="but">contact</button>
+    <button id="br">SEND MESSAGE</button>
+    
+        <script>
+         var head=document.createElement("div");
+        head.innerText="BR Architects";
+        head.style.height="50px";
+        head.style.width="100%";
+        head.style.background="azure";
+        head.style.position="fixed";
+        head.style.top="0";
+        head.style.zIndex="2"
+        head.style.display="flex";
+        head.style.justifyContent="space-between";
+        head.style.alignItems="center";
+        var head2=document.createElement("div");
+        head2.style.width="300px";
+        head2.style.display="flex";
+        head2.style.justifyContent="space-around";
+        var side1=document.createElement("a");
+        side1.innerText="Projects";
+        var side2=document.createElement("a");
+        side2.innerText="About";
+        var side3=document.createElement("a");
+        side3.innerText="Contacts";
+        document.body.appendChild(head);
+        head.appendChild(head2);
+        head2.appendChild(side1);
+        head2.appendChild(side2);
+        head2.appendChild(side3);
+        var bim=document.createElement("div");
+        bim.style.position="relative";
+        var text=document.createElement("div");
+        text.innerHTML="Br Architects";
+        text.style.width="100px";
+        text.style.position="absolute";
+        text.style.top="50%";
+        text.style.left="48%";
+        text.style.padding="10px"
+        text.style.backgroundColor="black";
+        text.style.color="white"; 
+        bim.style.background='url("https://www.w3schools.com/w3images/architect.jpg")';
+        bim.style.height="100vh";
+        bim.style.width="98vw";
+        bim.style.backgroundRepeat="no-repeat"
+        bim.style.backgroundSize="cover";
+        document.body.appendChild(bim);
+        bim.appendChild(text);
+        var sideheading=document.createElement("h2");
+        sideheading.innerText="Projects";
+        sideheading.style.marginTop="50px";
+        document.body.appendChild(sideheading);
+        var mn=document.createElement("div");
+        let content=["Summer house","Brick house","Renovated","Barn house","Summer house","Brick house","Renovated","Barn house"];
+        let photo=["https://www.w3schools.com/w3images/house5.jpg","https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house3.jpg","https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house5.jpg","https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house3.jpg","https://www.w3schools.com/w3images/house4.jpg"];
+        for(i=0;i<8;i++){
+         mn.style.display="grid";
+         mn.style.gridTemplateColumns="auto auto auto auto";
+         mn.style.gap="10px";
+        var el1=document.createElement("div");
+        el1.style.backgroundImage=`url(${photo[i]})`;
+        el1.style.height="280px";
+        el1.style.width="325px";
+        el1.style.backgroundRepeat="no-repeat";
+        el1.style.backgroundSize="cover"; 
+        var el2=document.createElement("div");
+        el2.innerText=content[i];
+        el2.style.color="white";
+        el2.style.backgroundColor="black";
+        el2.style.width="100px";
+        el2.style.padding="10px";
+        el1.appendChild(el2);
+        mn.appendChild(el1);
+        document.body.appendChild(mn);
+        }
+        var foothead=document.createElement("h1");
+        foothead.innerText="About";
+        document.body.appendChild(foothead);
+        var footer=document.createElement("div");
+        footer.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ";
+        document.body.appendChild(footer);
+        
+        var cart=document.createElement("div");
+        let pics=["https://www.w3schools.com/w3images/team2.jpg", "https://www.w3schools.com/w3images/team1.jpg", "https://www.w3schools.com/w3images/team3.jpg", "https://www.w3schools.com/w3images/team4.jpg"];
+        let name=["John Doe", "Jane Doe", "Mike Ross", "Dan Star"];
+        let roles=["CEO & Founder", "Architect", "Architect", "Architect"];
+        let cartcontent=["Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."];
+        for(i=0;i<4;i++){
+         cart.style.display="grid";
+         cart.style.gridTemplateColumns="auto auto auto auto";
+         cart.style.gap="10px";
+         var min1=document.createElement("div");
+
+        var ele=document.createElement("div");
+        ele.style.backgroundImage=`url(${pics[i]})`;
+        ele.style.height="280px";
+        ele.style.width="300px";
+        ele.style.backgroundRepeat="no-repeat";
+        ele.style.backgroundSize="cover";
+        ele.style.padding="10px";
+        ele.style.marginTop="8%";
+
+        var elem=document.createElement("div");
+        elem.innerText=name[i];
+        elem.style.width="100%";
+        elem.style.padding="2px";
+
+        var element=document.createElement("div");
+        element.innerText=roles[i];
+        element.style.width="100%";
+        element.style.color="grey";
+
+        var cc=document.createElement("p");
+        cc.innerText=cartcontent[i];
+
+        var bt=document.getElementById("but");
+        bt.style.width="100%";
+        bt.style.backgroundColor="lightgrey";
+        bt.style.border="none";
+        bt.style.padding="10px";
+
+        cart.appendChild(min1);
+        min1.appendChild(ele);
+        min1.appendChild(elem);
+        min1.appendChild(element);
+        min1.appendChild(cc);
+        min1.appendChild(bt);
+        document.body.appendChild(cart);
+        }
+        var seclast=document.createElement("div");
+        var frm=document.createElement("h1");
+        frm.innerText="Contact";
+        var fm=document.createElement("p");
+        fm.innerText="Lets get in touch and talk about your next project.";
+        
+        seclast.appendChild(frm);
+        seclast.appendChild(fm);
+        let v=["Name","Email","Subject","Comment"];
+        for(i=0;i<4;i++){
+        var r=document.createElement("input");
+        r.placeholder=v[i];
+        r.style.width="97%";
+        r.style.margin="6px";
+        r.style.padding="10px";
+        seclast.appendChild(r);
+        document.body.appendChild(seclast);
+        }
+        var p=document.getElementById("br");
+        p.style.color="white";
+        p.style.backgroundColor="black";
+        p.style.padding="15px";
+        p.style.border="none";
+        p.style.margin="5px";
+        document.body.appendChild(p);
+        var im=document.createElement("div");
+        im.style.background='url("https://www.w3schools.com/w3images/map.jpg")';
+        im.style.height="100vh";
+        im.style.width="98vw";
+        document.body.appendChild(im);
+        var art=document.createElement("div");
+        art.innerHTML="Powered by <u>w3.schools</u>";
+        art.style.textAlign="center";
+        art.style.backgroundColor="black";
+        art.style.color="white";
+        art.style.padding="2%";
+        document.body.appendChild(art);
+    </script>
+</body>
+</html>
